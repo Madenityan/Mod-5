@@ -44,13 +44,18 @@ table {
 /*RESET END*/
 
 body {
-	font-family: 'Arial, sans-serif';
+	font-family: 'Arial', 'sans-serif';
 	background: linear-gradient(to bottom, #d2d9db, #e5eaeb, #ffffff) no-repeat;
 }
 
 @font-face {
 	font-family:'AFKlampenborg';
 	src: url('../fonts/AFKlampenborg.otf');
+}
+
+@font-face {
+	font-family:'Helios';
+	src: url('../fonts/heliosextthinc.otf');
 }
 
 .containar {
@@ -60,15 +65,26 @@ body {
 
 /*HEADER*/
 .header-logo {
-	height: 164px;
 	overflow: hidden;
+}
+
+.image-logo {
+	margin: 29px 0;
+	width: 350px;
+	float:left;
+
+}
+
+header {
+	border-bottom: 1px solid #939598;
 }
 
 .image-position {
 	float: left;
+
 }
 
-h1 {
+.text-logo{
 	font-weight: 500;
     font-size: 22px;
     font-family: 'AFKlampenborg';
@@ -80,7 +96,102 @@ h1 {
     line-height: 0.9;
 }
 
-
-
-
+ h1 {
+	text-align: center;
+	margin-top: 60px;
+	font-weight: bold;
+	font-size: 15px;
+	color: #646464;
+	font-family: 'Helios';
+}
 /*END HEADER*/
+
+/*ASIDE*/
+.sidebar {
+	float: left;
+	width: 250px;
+}
+
+.categories a {
+	text-decoration: none;
+}
+
+
+
+
+
+
+
+
+/*END ASIDE*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*TABS*/
+#tab {
+	width: 540px;
+	float: right;
+}
+
+#tab >input {
+	display: none;
+}
+
+#tab >label {
+	cursor: pointer;
+	display: block;
+	float: left;
+	padding: 16px 27px;
+	background: linear-gradient(to top, #dbdad8, #e4e7e7, #e5eaeb) no-repeat;
+	border: 1px solid #939598;
+	font-size: 14px;
+	color: #939598;
+	width: 90px;
+	text-align: center;
+}
+
+#table {
+	clear: both;
+}
+
+#table > div {
+	position: absolute;
+	width: 528px;
+	padding: 15px;
+	overflow: hidden;
+	height: 200px;
+	opacity: 0;
+}
+
+#tab-1:checked ~ #table > div:nth-of-type(1),
+#tab-2:checked ~ #table > div:nth-of-type(2),
+#tab-3:checked ~ #table > div:nth-of-type(3) {
+	opacity: 1;
+}
+
+#tab input:checked + label {
+	background: linear-gradient(to bottom, #ffffff, #fbfcfc,#eaeeee) no-repeat;
+	color: #56bcfb;
+}
+
+section {
+	margin-top: -48px;
+}
+
+.label-one {
+	margin-right: 40px;
+}
+
+#tab label[for="tab-1"] {
+	margin-left: 60px;
+}
+/*END TABS*/
